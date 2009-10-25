@@ -1,19 +1,19 @@
 from os.path import join
 from setuptools import setup, find_packages
 
+readme = open(join('src', 'dolmen', 'field', 'README.txt')).read()
+history = open(join('docs', 'HISTORY.txt')).read()
 name = 'dolmen.field'
-version = '0.2'
+version = '0.3'
 
 setup(name = name,
       version = version,
       description = 'Generic Formlib fields',
-      long_description = open(
-          join('src/dolmen/field', 'README.txt')
-          ).read() + '\n',
+      long_description = readme + '\n\n' + history,
       keywords = 'Grok Zope3 Dolmen',
       author = 'Souheil Chelfouh',
-      author_email = 'souheil@chelfouh.com',
-      url = 'http://tracker.trollfot.org/',
+      author_email = 'trollfot@gmail.com',
+      url = 'http://gitweb.dolmen-project.org',
       download_url = 'http://pypi.python.org/pypi/dolmen.field',
       license = 'GPL',
       packages=find_packages('src', exclude=['ez_setup']),

@@ -8,7 +8,7 @@ from zope.schema.interfaces import IField
 class IClassField(IField):
     """Field requiring a valid class with an interface to validate.
     """
-    interface = InterfaceField(
+    schema = InterfaceField(
         required = False,
         title = u"Validation interface",
         description = u"Mandatory interface, needed to validate the value.",
